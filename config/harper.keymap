@@ -190,14 +190,14 @@
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW &inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
-        layer_8 {
+        symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                        &trans                                          &trans
+&trans           &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI          &kp COMMA                &trans  &trans  &trans  &trans  &trans  &trans
+&kp EXCLAMATION  &kp LEFT_BRACE  &kp APOSTROPHE        &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION             &trans  &trans  &trans  &trans  &trans  &trans
+&kp HASH         &kp CARET       &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp SLASH                &trans  &trans  &trans  &trans  &trans  &trans
+&kp TILDE        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp BACKSLASH            &none   &trans  &trans  &trans  &trans  &trans
+&trans           &trans          &kp AT_SIGN           &kp AMPERSAND          &kp LBKT          &kp RBKT       &kp PLUS  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                                                                                         &trans                                          &trans
             >;
         };
 
