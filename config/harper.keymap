@@ -39,32 +39,32 @@
 
         TabJumpLeft {
             bindings = <&kp LS(LG(LEFT_BRACKET))>;
-            key-positions = <31 32>;
+            key-positions = <45 46>;
         };
 
         TabJumpRight {
             bindings = <&kp LS(LG(RIGHT_BRACKET))>;
-            key-positions = <33 32>;
+            key-positions = <46 47>;
         };
 
         WorkspaceJumpLeft {
             bindings = <&kp LC(LEFT)>;
-            key-positions = <26 27>;
+            key-positions = <17 16>;
         };
 
         WorkspaceJumpRight {
             bindings = <&kp LC(RIGHT)>;
-            key-positions = <27 28>;
+            key-positions = <28 29>;
         };
 
         LeftArrow {
             bindings = <&kp LEFT>;
-            key-positions = <14 15>;
+            key-positions = <38 39>;
         };
 
         RightArrow {
             bindings = <&kp RIGHT>;
-            key-positions = <15 16>;
+            key-positions = <39 40>;
         };
 
         UpArrow {
@@ -92,39 +92,14 @@
             key-positions = <45 44>;
         };
 
-        Underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <46 47>;
-        };
-
-        Minus {
-            bindings = <&kp MINUS>;
-            key-positions = <47 48>;
-        };
-
         Pipe {
             bindings = <&kp PIPE>;
             key-positions = <33 34>;
         };
 
-        Minus2 {
-            bindings = <&kp MINUS>;
-            key-positions = <40 39>;
-        };
-
-        Equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <38 39>;
-        };
-
-        Plus {
-            bindings = <&kp PLUS>;
-            key-positions = <37 38>;
-        };
-
         DollarSign {
             bindings = <&kp DOLLAR>;
-            key-positions = <45 46>;
+            key-positions = <21 22>;
         };
 
         CmdRight {
@@ -141,14 +116,25 @@
 &kp ESCAPE  &kp N1           &kp N2     &kp N3        &kp N4        &kp N5            &kp N6        &kp N7     &kp N8     &kp N9  &kp N0  &kp BACKSPACE
 &kp GRAVE   &kp Q            &kp Y      &kp O         &kp U         &kp SEMI          &kp X         &kp L      &kp D      &kp W   &kp Z   &kp LEFT_BRACKET
 &kp B       &kp C            &kp I      &kp E         &kp A         &kp COMMA         &kp K         &kp H      &kp T      &kp N   &kp S   &kp V
-&kp LSHFT   &kp APOS         &kp MINUS  &kp EQUAL     &kp DOT       &kp SLASH         &mo 3         &mo 3      &kp J      &kp M   &kp G   &kp P
-&kp F       &kp RIGHT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none      &mo 2  &kp TAB       &kp SPACE  &kp ENTER  &kp R   &mo 1   &none             &bt BT_SEL 0
+&kp LSHFT   &kp APOS         &kp MINUS  &kp EQUAL     &kp DOT       &kp SLASH         &mo 4         &mo 4      &kp J      &kp M   &kp G   &kp P
+&kp F       &kp RIGHT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none      &mo 3  &kp TAB       &kp SPACE  &kp ENTER  &kp R   &mo 1   &none             &bt BT_SEL 0
                                                                                       &bt BT_SEL 1                                                          &kp RIGHT_BRACKET
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp LC(LEFT_ARROW) LC(RIGHT)>;
+        };
+
+        symbol {
+            bindings = <
+&trans           &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI          &kp COMMA                &trans      &trans     &trans  &trans  &trans  &trans
+&kp EXCLAMATION  &kp LEFT_BRACE  &kp APOSTROPHE        &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION             &trans      &trans     &trans  &trans  &trans  &trans
+&kp HASH         &kp CARET       &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp SLASH                &trans      &trans     &trans  &trans  &trans  &trans
+&kp TILDE        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp BACKSLASH            &none       &trans     &trans  &trans  &trans  &trans
+&trans           &trans          &kp AT_SIGN           &kp AMPERSAND          &kp LBKT          &kp RBKT       &kp PLUS  &kp DOLLAR  &kp UNDER  &trans  &trans  &trans  &trans  &trans
+                                                                                                                         &trans                                                 &trans
+            >;
         };
 
         num_layer {
@@ -183,22 +169,11 @@
 &rgb_ug RGB_TOG    &rgb_ug RGB_BRD                  &rgb_ug RGB_BRI                    &rgb_ug RGB_SPD                   &rgb_ug RGB_SPI                  &rgb_ug RGB_EFF                          &none           &none      &none         &none                     &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(218,100,50)  &rgb_ug RGB_COLOR_HSB(120,97,50)  &rgb_ug RGB_COLOR_HSB(60,0,100)  &rgb_ug RGB_COLOR_HSB(64,100,52)         &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT                 &none  &none
 &sys_reset         &bootloader                      &none                              &none                             &none                            &none                                    &none           &none      &none         &none                     &none  &none
-&none              &none                            &kp LCTRL                          &kp LEFT_ALT                      &kp LCMD                         &mo 2                             &mo 1  &kp LEFT_GUI    &kp SPACE  &kp ENTER     &kp LS(LA(LC(LEFT_GUI)))  &mo 1  &mo 2  &kp RCMD
+&none              &none                            &kp LCTRL                          &kp LEFT_ALT                      &kp LCMD                         &mo 3                             &mo 2  &kp LEFT_GUI    &kp SPACE  &kp ENTER     &kp LS(LA(LC(LEFT_GUI)))  &mo 2  &mo 3  &kp RCMD
                                                                                                                                                                                                    &kp RIGHT_ALT                                                                    &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW &inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
-        };
-
-        symbol {
-            bindings = <
-&trans           &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI          &kp COMMA                &trans  &trans  &trans  &trans  &trans  &trans
-&kp EXCLAMATION  &kp LEFT_BRACE  &kp APOSTROPHE        &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION             &trans  &trans  &trans  &trans  &trans  &trans
-&kp HASH         &kp CARET       &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp SLASH                &trans  &trans  &trans  &trans  &trans  &trans
-&kp TILDE        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp BACKSLASH            &none   &trans  &trans  &trans  &trans  &trans
-&trans           &trans          &kp AT_SIGN           &kp AMPERSAND          &kp LBKT          &kp RBKT       &kp PLUS  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                                                                                         &trans                                          &trans
-            >;
         };
 
         extra1 { status = "reserved"; };
